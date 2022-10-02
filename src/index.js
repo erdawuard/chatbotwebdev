@@ -1,17 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
+import Kommunicate from '@kommunicate/kommunicate-chatbot-plugin';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Postgres from './Postgres';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+Kommunicate.init("27c583cbba7df01cf38e32ab9aa59dd49" , {"popupWidget":true,"automaticChatOpenOnNavigation":true})
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root'));
