@@ -14,7 +14,6 @@ const App = () => (
     <Features />
   </div>
 
-  
 );
 
 export default App;
